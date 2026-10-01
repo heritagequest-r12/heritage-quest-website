@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Heritage Quest | Region XII Knowledge Vault</title>
+  <meta name="description" content="Heritage Quest is a 2.5D gamified digital archive for cultural preservation in SOCCSKSARGEN (Region 12).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="nav">
+  <a href="#home" class="brand">
+    <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5l-8-3z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="11" r="2.5" fill="currentColor"/></svg>
+    <span><strong>HERITAGE QUEST</strong><small>Region XII Knowledge Vault</small></span>
+  </a>
+  <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+  <nav id="navLinks" class="nav-links">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#features">Features</a>
+    <a href="#download">Download</a>
+    <a href="#community">Community</a>
+    <a href="#credits">Credits</a>
+    <a href="#contact">Contact</a>
+    <a href="#download" class="btn btn-outline nav-play">Play Now</a>
+  </nav>
+</header>
+
+<main>
+<!-- ============ HOME ============ -->
+<section id="home" class="hero">
+  <div class="hero-text">
+    <span class="tag"><i></i> Official Indie Project</span>
+    <h1><span class="gold">Heritage</span><br>Quest</h1>
+    <p class="slogan">"Explore. Survive. Discover."</p>
+    <p class="lead">Embark on an epic 2.5D isometric journey into the rich, authentic history, tales, and cultural treasures of <a href="#about">SOCCSKSARGEN (Region 12)</a>. Manage stats, finish quests, and unlock your heritage.</p>
+    <div class="btn-row">
+      <a href="#download" class="btn btn-gold">&#11015; Download Now</a>
+      <a href="#community" class="btn btn-outline">Rate &amp; Review</a>
+    </div>
+    <p class="meta">Windows 10 / 11 &nbsp;&bull;&nbsp; Godot Engine &nbsp;&bull;&nbsp; <span class="gold">Supabase Backend</span></p>
+  </div>
+  <figure class="hero-shot">
+    <!-- Put your game screenshot at assets/images/game-screenshot.png -->
+    <img src="assets/images/game-screenshot.png" alt="Heritage Quest main menu screenshot">
+  </figure>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section">
+  <h2>About the Game</h2>
+  <div class="two-col">
+    <p>Heritage Quest: A 2.5D Gamified Digital Archive for Cultural Preservation in Region 12 is a capstone project that turns local history into play. Players travel across South Cotabato, Sarangani, Sultan Kudarat, and Cotabato, meeting characters and collecting cultural knowledge along the way.</p>
+    <p>Every discovery is saved to an in-game archive, so learning about the traditions, places, and stories of Region 12 becomes part of the adventure instead of a separate lesson.</p>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section id="features" class="section alt">
+  <h2>Features</h2>
+  <div class="grid3">
+    <article class="card"><h3>2.5D Exploration</h3><p>Walk through isometric-style scenes inspired by real places in Region 12.</p></article>
+    <article class="card"><h3>Discovery Journal</h3><p>Every cultural item you find is recorded in your digital archive.</p></article>
+    <article class="card"><h3>Quests &amp; Minigames</h3><p>Finish quests and challenges, including the Mt. Apo climb.</p></article>
+    <article class="card"><h3>Stats &amp; Survival</h3><p>Manage your stamina and resources as you travel.</p></article>
+    <article class="card"><h3>Cultural Preservation</h3><p>Learn authentic stories, tools, and traditions from the region.</p></article>
+    <article class="card"><h3>Free to Play</h3><p>Download the game and play it on your Windows PC.</p></article>
+  </div>
+</section>
+
+<!-- ============ DOWNLOAD ============ -->
+<section id="download" class="section">
+  <h2>Download Game</h2>
+  <div class="download-box">
+    <div class="dl-main">
+      <h3>Heritage Quest <span id="dlVersion">v1.0</span></h3>
+      <ul class="info-list">
+        <li><b>Platform</b> <span id="dlPlatform">Windows 10 / 11 (64-bit)</span></li>
+        <li><b>File format</b> <span id="dlFormat">ZIP</span></li>
+        <li><b>File size</b> <span id="dlSize">about 500 MB</span></li>
+      </ul>
+      <a id="downloadBtn" class="btn btn-gold" href="#" target="_blank" rel="noopener">&#11015; Download Game</a>
+      <p class="small" id="dlNote"></p>
+    </div>
+    <div class="dl-side">
+      <h3>How to install</h3>
+      <ol>
+        <li>Download the ZIP file.</li>
+        <li>Right-click it and choose <b>Extract All</b>.</li>
+        <li>Open the extracted game folder.</li>
+        <li>Run the game executable (<code>HeritageQuest.exe</code>).</li>
+      </ol>
+      <h3>System requirements</h3>
+      <ul>
+        <li>Windows 10 or 11, 64-bit</li>
+        <li>4 GB RAM or more</li>
+        <li>Any graphics card with OpenGL 3.3 support</li>
+        <li>Internet connection (for online features)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMMUNITY: RATE + FEEDBACK ============ -->
+<section id="community" class="section alt">
+  <h2>Rate &amp; Give Feedback</h2>
+  <p class="sub">No account needed. Your submissions are anonymous unless you type a nickname.</p>
+
+  <div class="two-col forms">
+    <!-- RATING FORM -->
+    <form id="ratingForm" class="panel" novalidate>
+      <h3>Rate the game</h3>
+      <div class="summary">
+        <span class="avg" id="avgRating">0.0</span>
+        <div>
+          <div class="stars" id="avgStars" aria-hidden="true">&#9734;&#9734;&#9734;&#9734;&#9734;</div>
+          <small id="totalRatings">0 ratings</small>
+        </div>
+      </div>
+      <div class="star-input" id="starInput" role="radiogroup" aria-label="Your rating">
+        <button type="button" role="radio" aria-checked="false" data-value="1" aria-label="1 star">&#9733;</button>
+        <button type="button" role="radio" aria-checked="false" data-value="2" aria-label="2 stars">&#9733;</button>
+        <button type="button" role="radio" aria-checked="false" data-value="3" aria-label="3 stars">&#9733;</button>
+        <button type="button" role="radio" aria-checked="false" data-value="4" aria-label="4 stars">&#9733;</button>
+        <button type="button" role="radio" aria-checked="false" data-value="5" aria-label="5 stars">&#9733;</button>
+      </div>
+      <label for="rateNick">Nickname (optional)</label>
+      <input id="rateNick" type="text" maxlength="30" placeholder="Anonymous Player" autocomplete="off">
+      <label for="rateComment">Review (optional)</label>
+      <textarea id="rateComment" maxlength="500" rows="3" placeholder="What did you think of the game?"></textarea>
+      <input type="text" class="hp" id="rateHp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button type="submit" class="btn btn-gold">Submit Rating</button>
+      <p class="status" id="ratingStatus" role="status"></p>
+    </form>
+
+    <!-- FEEDBACK FORM -->
+    <form id="feedbackForm" class="panel" novalidate>
+      <h3>Suggestions &amp; bug reports</h3>
+      <label for="fbNick">Nickname (optional)</label>
+      <input id="fbNick" type="text" maxlength="30" placeholder="Anonymous Player" autocomplete="off">
+      <label for="fbType">Feedback type</label>
+      <select id="fbType">
+        <option value="">Select a type...</option>
+        <option>Suggestion</option>
+        <option>Bug Report</option>
+        <option>General Feedback</option>
+      </select>
+      <label for="fbMessage">Message</label>
+      <textarea id="fbMessage" maxlength="1000" rows="5" placeholder="Tell us what to improve, or describe the problem you found."></textarea>
+      <input type="text" class="hp" id="fbHp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button type="submit" class="btn btn-gold">Send Feedback</button>
+      <p class="status" id="feedbackStatus" role="status"></p>
+    </form>
+  </div>
+
+  <!-- DISPLAY -->
+  <div class="board">
+    <div class="tabs" role="tablist">
+      <button class="tab active" id="tabReviews" role="tab" aria-selected="true">Player Reviews</button>
+      <button class="tab" id="tabFeedback" role="tab" aria-selected="false">Feedback</button>
+      <select id="fbFilter" class="filter hidden" aria-label="Filter feedback">
+        <option value="">All types</option>
+        <option>Suggestion</option>
+        <option>Bug Report</option>
+        <option>General Feedback</option>
+      </select>
+    </div>
+    <div id="boardList" class="board-list"></div>
+  </div>
+</section>
+
+<!-- ============ CREDITS ============ -->
+<section id="credits" class="section">
+  <h2>Credits</h2>
+  <p class="center">Developed by the Heritage Quest capstone team, STI College General Santos.<br>Built with Godot Engine and Supabase.</p>
+</section>
+</main>
+
+<!-- ============ CONTACT / FOOTER ============ -->
+<footer id="contact" class="footer">
+  <p><strong>Heritage Quest</strong> &mdash; Region XII Knowledge Vault</p>
+  <p class="small">Questions? Use the feedback form above or email <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+  <p class="small">A capstone project. Not for commercial use.</p>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+</body>
+</html>
