@@ -29,7 +29,7 @@ code { font-family: var(--mono); color: var(--gold); }
 .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 14px 4vw; background: linear-gradient(#090c11ee, #090c11bb); backdrop-filter: blur(6px); }
 .brand { display: flex; align-items: center; gap: 12px; color: var(--gold); }
 .brand:hover { text-decoration: none; }
-.brand-icon { width: 38px; height: 38px; padding: 6px; border: 2px solid var(--gold); }
+.brand-icon { width: 48px; height: 48px; object-fit: contain; }
 .brand strong { display: block; font-family: var(--pixel); font-size: .85rem; letter-spacing: 2px; }
 .brand small { display: block; font-family: var(--mono); font-size: .62rem; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; }
 .nav-links { display: flex; align-items: center; gap: 28px; }
@@ -114,6 +114,28 @@ textarea { resize: vertical; }
 .item p { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
 .item p.none { color: var(--muted); font-style: italic; }
 .empty { color: var(--muted); text-align: center; padding: 30px; border: 1px dashed var(--line); }
+
+/* ---------- Credits ---------- */
+.credits-lead { max-width: 60ch; margin: -12px 0 0; color: var(--muted); }
+.credits h3 { margin: 44px 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--line); font-family: var(--mono); font-weight: 400; font-size: .9rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); }
+.team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.person { display: flex; align-items: center; gap: 16px; padding: 18px 20px; background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--gold); color: var(--text); transition: background .15s, border-color .15s, transform .1s; }
+.person:hover { text-decoration: none; background: #f5a30a14; border-color: var(--gold); transform: translateY(-2px); }
+.avatar { flex: none; display: grid; place-items: center; width: 52px; height: 52px; border: 2px solid var(--gold); background: var(--bg); color: var(--gold); font-family: var(--pixel); font-size: .9rem; }
+.person-name { display: block; font-weight: 600; }
+.person-link { display: block; margin-top: 2px; font-family: var(--mono); font-size: .82rem; letter-spacing: 1px; color: var(--muted); }
+.roles { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 0; padding: 0; list-style: none; }
+.roles li { padding: 2px 8px; border: 1px solid var(--gold); font-family: var(--mono); font-size: .72rem; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); }
+.person.adviser { max-width: 480px; padding: 22px; }
+.adviser .avatar { width: 64px; height: 64px; font-size: 1.05rem; }
+.adviser .person-name { font-size: 1.15rem; }
+.craft { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.craft-box { padding: 22px; background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--gold); }
+.craft-box h4 { margin: 0 0 10px; font-family: var(--mono); font-size: 1.1rem; letter-spacing: 1px; }
+.craft-box p { margin: 0 0 14px; color: var(--muted); }
+.craft-box ul { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.craft-box li { padding: 3px 10px; border: 1px solid var(--line); font-family: var(--mono); font-size: .82rem; letter-spacing: 1px; }
+.craft-box li:hover { border-color: var(--gold); }
 
 /* ---------- Footer / toast ---------- */
 .footer { text-align: center; padding: 40px 4vw; border-top: 1px solid var(--line); background: var(--panel2); }

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Heritage Quest | Region XII Knowledge Vault</title>
   <meta name="description" content="Heritage Quest is a 2.5D gamified digital archive for cultural preservation in SOCCSKSARGEN (Region 12).">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet">
@@ -15,7 +16,7 @@
 <!-- ============ NAVIGATION ============ -->
 <header class="nav">
   <a href="#home" class="brand">
-    <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5l-8-3z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="11" r="2.5" fill="currentColor"/></svg>
+    <img class="brand-icon" src="assets/images/logo.png" alt="Heritage Quest logo">
     <span><strong>HERITAGE QUEST</strong><small>Region XII Knowledge Vault</small></span>
   </a>
   <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
@@ -175,9 +176,95 @@
 </section>
 
 <!-- ============ CREDITS ============ -->
-<section id="credits" class="section">
+<section id="credits" class="section credits">
   <h2>Credits</h2>
-  <p class="center">Developed by the Heritage Quest capstone team, STI College General Santos.<br>Built with Godot Engine and Supabase.</p>
+  <p class="credits-lead">Heritage Quest was made by a capstone team at STI College General Santos. Click a name to visit their Facebook profile.</p>
+
+  <h3>Capstone project adviser</h3>
+  <a class="person adviser" href="https://www.facebook.com/aizazaic.panciang" target="_blank" rel="noopener noreferrer">
+    <span class="avatar" aria-hidden="true">A</span>
+    <span>
+      <span class="person-name">Aiza B. Panciang</span>
+      <span class="person-link">Facebook profile</span>
+    </span>
+  </a>
+
+  <h3>The team</h3>
+  <div class="team-grid">
+    <a class="person" href="https://www.facebook.com/andrew.ben.mejia.2024/" target="_blank" rel="noopener noreferrer">
+      <span class="avatar" aria-hidden="true">A</span>
+      <span>
+        <span class="person-name">Andrew Ben M. Mejia</span>
+        <ul class="roles">
+          <li>Developer</li>
+          <li>Assets</li>
+          <li>Video cutscenes / editor</li>
+          <li>Manuscript</li>
+        </ul>
+      </span>
+    </a>
+    <a class="person" href="https://www.facebook.com/jamesbryan.pulia" target="_blank" rel="noopener noreferrer">
+      <span class="avatar" aria-hidden="true">J</span>
+      <span>
+        <span class="person-name">James Bryan F. Pulia</span>
+        <ul class="roles">
+          <li>Developer</li>
+          <li>Assets</li>
+          <li>Manuscript</li>
+        </ul>
+      </span>
+    </a>
+    <a class="person" href="https://www.facebook.com/randallvan.lagman.1" target="_blank" rel="noopener noreferrer">
+      <span class="avatar" aria-hidden="true">R</span>
+      <span>
+        <span class="person-name">Randall Van C. Lagman</span>
+        <ul class="roles">
+          <li>Assets</li>
+          <li>Manuscript</li>
+        </ul>
+      </span>
+    </a>
+    <a class="person" href="https://www.facebook.com/darylleanooo" target="_blank" rel="noopener noreferrer">
+      <span class="avatar" aria-hidden="true">D</span>
+      <span>
+        <span class="person-name">Daryl E. Leaño</span>
+        <ul class="roles">
+          <li>Video cutscenes / editor</li>
+          <li>Manuscript</li>
+        </ul>
+      </span>
+    </a>
+  </div>
+
+  <h3>How it was made</h3>
+  <div class="craft">
+    <div class="craft-box">
+      <h4>Art</h4>
+      <p>The team drew the original artwork by hand, then enhanced it with AI generation.</p>
+      <ul>
+        <li>Google Gemini</li>
+        <li>Piskel</li>
+        <li>Aseprite</li>
+      </ul>
+    </div>
+    <div class="craft-box">
+      <h4>Sound effects</h4>
+      <p>Sound effects come from free libraries.</p>
+      <ul>
+        <li><a href="https://pixabay.com/sound-effects/" target="_blank" rel="noopener noreferrer">Pixabay Sound Effects</a></li>
+        <li><a href="https://freesound.org/" target="_blank" rel="noopener noreferrer">Freesound</a></li>
+      </ul>
+    </div>
+    <div class="craft-box">
+      <h4>Technology</h4>
+      <p>The game and this website run on open tools and free hosting.</p>
+      <ul>
+        <li>Godot Engine</li>
+        <li>Supabase</li>
+        <li>GitHub Pages</li>
+      </ul>
+    </div>
+  </div>
 </section>
 </main>
 
@@ -192,5 +279,38 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="script.js"></script>
+<script>
+/* Nav highlight follows scroll */
+(function () {
+  var links = document.querySelectorAll('#navLinks a[href^="#"]:not(.nav-play)');
+  var items = [], lock = false, timer;
+  links.forEach(function (a) {
+    var el = document.querySelector(a.getAttribute('href'));
+    if (el) items.push({ a: a, el: el });
+    a.addEventListener('click', function () {
+      setActive(a);
+      lock = true;
+      clearTimeout(timer);
+      timer = setTimeout(function () { lock = false; update(); }, 900);
+    });
+  });
+  function setActive(a) {
+    links.forEach(function (l) { l.classList.toggle('active', l === a); });
+  }
+  function update() {
+    if (lock || !items.length) return;
+    var y = window.scrollY + 120;
+    var current = items[0];
+    items.forEach(function (it) { if (it.el.offsetTop <= y) current = it; });
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+      current = items[items.length - 1];
+    }
+    setActive(current.a);
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();
+</script>
 </body>
 </html>
