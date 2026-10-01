@@ -9,7 +9,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" id="themeColor" content="#090c11">
+  <script>
+  (function () {
+    var r = document.documentElement, t = null;
+    try { t = localStorage.getItem('hq_theme'); } catch (e) {}
+    if (t !== 'light' && t !== 'dark') {
+      t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+    r.setAttribute('data-theme', t);
+    r.className += ' js';
+  })();
+  </script>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme.css">
 </head>
 <body>
 
@@ -198,7 +212,6 @@
         <ul class="roles">
           <li>Developer</li>
           <li>Assets</li>
-          <li>Video cutscenes / editor</li>
           <li>Manuscript</li>
         </ul>
       </span>
@@ -277,6 +290,7 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+<script src="ui.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="script.js"></script>
 <script>
