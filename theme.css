@@ -14,7 +14,7 @@
   --bg: #f7f4ed;
   --panel: #ffffff;
   --panel2: #efeadf;
-  --gold: #9a5400;          /* darker amber so text is readable on light */
+  --gold: #9a5400;
   --text: #1c1a16;
   --muted: #5f5a50;
   --line: #d8d1c2;
@@ -24,14 +24,20 @@
   --gold-faint: #9a54000f;
 }
 
+:root[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #f7f4ed;
+  border-left: 1px solid #d8d1c2;
+}
+:root[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: #9a5400;
+  border: 2px solid #f7f4ed;
+}
+
 /* Parts of style.css that had hard-coded dark colors */
 :root[data-theme="light"] .nav { background: linear-gradient(#f7f4edee, #f7f4edcc); }
 :root[data-theme="light"] .tag { background: #ffffffb3; }
 :root[data-theme="light"] .hero {
-  background:
-    linear-gradient(rgba(247,244,237,.7), rgba(247,244,237,.92)),
-    url("assets/images/hero-bg.jpg") center / cover no-repeat,
-    radial-gradient(circle at 70% 20%, #f4dcaa, #f7f4ed 70%);
+  background: linear-gradient(rgba(247,244,237,.7), rgba(247,244,237,.92));
 }
 :root[data-theme="light"] .hero h1 { text-shadow: 3px 3px 0 #9a54002e; }
 :root[data-theme="light"] .hero-shot { background: #e9e3d6; box-shadow: 0 8px 40px #9a54002e; }
@@ -67,13 +73,11 @@
   :root[data-theme="light"] .nav-links { background: #f7f4edf5; }
 }
 
-/* Smooth color change while switching theme (JS adds this class for ~0.4s) */
 html.theme-anim, html.theme-anim *, html.theme-anim *::before, html.theme-anim *::after {
   transition: background-color .35s ease, color .35s ease, border-color .35s ease, box-shadow .35s ease !important;
 }
 
 /* ---------- Scroll animation ---------- */
-/* Only active when JS is running (the .js class is set in <head>). */
 .js .reveal {
   opacity: 0;
   transform: translateY(24px);

@@ -14,7 +14,11 @@
   --body: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+html { 
+  scroll-behavior: smooth; 
+  scroll-padding-top: 80px; 
+  overflow-y: scroll;
+}
 body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--body); line-height: 1.6; }
 a { color: var(--gold); text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -24,6 +28,23 @@ a:hover { text-decoration: underline; }
 .center { text-align: center; }
 .hidden { display: none !important; }
 code { font-family: var(--mono); color: var(--gold); }
+
+/* ---------- Custom Gold Pixel Scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #090c11;
+  border-left: 1px solid #2b313b;
+}
+::-webkit-scrollbar-thumb {
+  background: #f5a30a;
+  border-radius: 2px;
+  border: 2px solid #090c11;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffb82e;
+}
 
 /* ---------- Navigation ---------- */
 .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 14px 4vw; background: linear-gradient(#090c11ee, #090c11bb); backdrop-filter: blur(6px); }
@@ -51,7 +72,7 @@ code { font-family: var(--mono); color: var(--gold); }
 
 /* ---------- Hero ---------- */
 .hero { min-height: 100vh; display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; padding: 120px 4vw 60px;
-  background: linear-gradient(rgba(9,12,17,.55), rgba(9,12,17,.85)), url("assets/images/hero-bg.jpg") center / cover no-repeat, radial-gradient(circle at 70% 20%, #2a1e3a, #090c11 70%); }
+  background: linear-gradient(rgba(9,12,17,.55), rgba(9,12,17,.85)); }
 .tag { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); padding: 4px 12px; font-family: var(--mono); font-size: .72rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); background: #0006; }
 .tag i { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); }
 .hero h1 { font-family: var(--pixel); font-size: clamp(2rem, 6.4vw, 5.2rem); line-height: 1.25; margin: 22px 0; text-transform: uppercase; text-shadow: 4px 4px 0 #000a; }
